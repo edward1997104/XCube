@@ -76,6 +76,7 @@ bind_ext = FVDBExtension(
             get_source_files("csrc/pcproc") +
             get_source_files("csrc/sparse_solve"),
     include_dirs=extra_includes,
+    library_dirs=[],
     extra_compile_args={'cxx': ['-O2'], 'nvcc': ['-O2']},
     libraries=['cusparse']
 )
